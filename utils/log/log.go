@@ -7,6 +7,10 @@ import (
 )
 
 func Add(line, message string) {
+	if _, err := os.Stat("./logs"); os.IsNotExist(err) {
+		os.Mkdir("./logs", os.ModePerm)
+	}
+
 	t := time.Now()
 	date := t.Format("2006-01-02")
 

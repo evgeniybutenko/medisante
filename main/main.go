@@ -39,9 +39,18 @@ func main() {
 }
 
 func index(w http.ResponseWriter, r *http.Request) {
+	var body, err = ioutil.ReadFile("./files/www/app/build/index.html")
+	if err != nil {
+		errorText := "index.html not found. Compile React application before running application."
+		log.Add(code.CodeLine(), errorText)
+
+		w.WriteHeader(http.StatusNotFound)
+		w.Write([]byte(errorText))
+		return
+	}
+
 	go log.Add(code.CodeLine(), "Someone has entered here.")
 
-	var body, _ = ioutil.ReadFile("./files/www/app/build/index.html")
 	w.Header().Set("Content-Type", "text/html")
 	w.Write(body)
 }
