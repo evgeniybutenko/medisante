@@ -1,0 +1,17 @@
+body {
+    background: rgb(247, 246, 246);
+}
+
+hr {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.display-4 {
+    font-size: 2rem;
+}
+
+.list-group-item {
+    padding: 0px;
+    border: 0px;
+}
