@@ -18,7 +18,7 @@ After all dependencies will be installed, project should be compiled. To compile
 ```
 npm run-script build
 ```
-After script will finished folder **./files/www/app/build/** should be created. This folder contain compiled and compressed React.JS-project. 
+After script will finished folder **./files/www/app/build/** should be created. This folder contain compiled and compressed React application. 
 
 Now project is ready to run. Open **./**(root) folder and run command:
 ```
